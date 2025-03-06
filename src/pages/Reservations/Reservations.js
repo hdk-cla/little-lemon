@@ -1,16 +1,31 @@
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 import './Reservations.css';
 
 function Reservations() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    date: '',
+    date: null,  // dateをnullで初期化
     time: '',
     guests: '1',
     occasion: 'birthday',
-    specialRequests: ''  // 追加
+    specialRequests: ''
   });
+
+  // 利用可能な最小日付を設定（今日から）
+  const minDate = new Date();
+  // 利用可能な最大日付を設定（3ヶ月先まで）
+  const maxDate = new Date();
+  maxDate.setMonth(maxDate.getMonth() + 3);
+
+  const handleDateChange = (date) => {
+    setFormData({
+      ...formData,
+      date: date
+    });
+  };
 
 
   const handleSubmit = (e) => {
@@ -62,15 +77,19 @@ function Reservations() {
             />
           </div>
 
+          <div className="form-row">
           <div className="form-group">
             <label htmlFor="date">Date</label>
-            <input
-              type="date"
-              id="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
+            <DatePicker
+              selected={formData.date}
+              onChange={handleDateChange}
+              dateFormat="MMMM d, yyyy"
+              minDate={minDate}
+              maxDate={maxDate}
+              placeholderText="Select a date"
               required
+              className="date-picker"
+              id="date"
             />
           </div>
 
@@ -89,6 +108,7 @@ function Reservations() {
               ))}
             </select>
           </div>
+        </div>
 
           <div className="form-group">
             <label htmlFor="guests">Number of Guests</label>

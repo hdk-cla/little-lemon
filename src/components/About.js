@@ -1,10 +1,10 @@
 import React from 'react';
 import chefImage1 from './img/restaurant.jpg';
-import chefImage2 from './img/restaurant chef B.jpg';
+import chefImage2 from './img/restaurant-chef-B.jpg';
 
 function About() {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="about-content">
         <div className="about-text">
           <h2>Little Lemon</h2>

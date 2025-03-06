@@ -1,5 +1,6 @@
 import React from 'react';
-import footerLogo from './img/footer-logo.png';
+import "./Footer.css";
+import footerLogo from 'images/footer-logo.png';
 
 function Footer() {
   return (
@@ -35,7 +36,7 @@ function Footer() {
           <ul className="social-links">
             <li><a href="https://facebook.com">Facebook</a></li>
             <li><a href="https://instagram.com">Instagram</a></li>
-            <li><a href="https://twitter.com">Twitter</a></li>
+            <li><a href="https://x.com"> X (formerly Twitter)</a></li>
           </ul>
         </div>
       </div>

@@ -1,0 +1,75 @@
+.introduction {
+  display: flex;
+  background-color: var(--primary-green);
+  color: var(--highlight-white);
+  padding: 20px 15%;
+  align-items: center; /* 追加 */
+  gap:100px;
+}
+
+.introduction-content {
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.introduction-content h1 {
+  color: var(--primary-yellow);
+  margin-bottom: -70px;
+  white-space: nowrap;
+  font-size: 4rem;
+  font-family: 'Markazi Text', serif;
+}
+
+.introduction-content h2 {
+  margin-bottom: 0px;
+  font-size: 3rem;
+  font-family: 'Markazi Text', serif;
+}
+.introduction-content p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.introduction-image {
+  width: 250px;
+  min-width: 250px;
+  margin-left: auto;
+}
+
+.introduction-image img {
+  width: 100%;
+  margin-left: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .introduction {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .introduction-image {
+    margin-left: 0;
+  }
+}
+
+.reserve-btn {
+  background-color: var(--primary-yellow);
+  color: var(--text-black);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  width: fit-content;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.reserve-btn:hover {
+  background-color: var(--secondary-orange);
+}

@@ -1,0 +1,30 @@
+.booking-page {
+  background-color: var(--highlight-white);
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+}
+
+.booking-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.booking-container h1 {
+  color: var(--primary-green);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.booking-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 3px;
+  background-color: var(--primary-yellow);
+}

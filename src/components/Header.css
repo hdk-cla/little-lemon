@@ -74,3 +74,18 @@
     height: 40px;
   }
 }
+
+.nav-button {
+  background: none;
+  border: none;
+  color: var(--primary-green);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: var(--secondary-orange);
+}

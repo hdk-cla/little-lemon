@@ -55,7 +55,7 @@ function Header() {
             <li><Link to="/">Home</Link></li>
             <li><a href="#about" onClick={handleAboutClick}>About</a></li>
             <li><Link to="/menu">Menu</Link></li>
-            <li><Link to="/reservations">Reservations</Link></li>
+            <li><Link to="/booking">Reservations</Link></li>
           </ul>
         </nav>
       </div>

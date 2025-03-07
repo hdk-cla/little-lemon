@@ -36,7 +36,7 @@ function Footer() {
           <ul className="social-links">
             <li><a href="https://facebook.com">Facebook</a></li>
             <li><a href="https://instagram.com">Instagram</a></li>
-            <li><a href="https://x.com"> X (formerly Twitter)</a></li>
+            <li><a href="https://x.com"> X </a></li>
           </ul>
         </div>
       </div>

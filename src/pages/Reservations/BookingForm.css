@@ -1,0 +1,153 @@
+/* 基本レイアウト */
+.booking-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* フォームグループの共通スタイル */
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+/* 入力要素の共通スタイル */
+.form-group input,
+.form-group select,
+.form-group textarea,
+.date-picker {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* フォーカス時のスタイル */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.date-picker:focus {
+  outline: none;
+  border-color: var(--primary-yellow);
+  box-shadow: 0 0 0 2px rgba(244, 206, 20, 0.2);
+}
+
+/* テキストエリア特有のスタイル */
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* セレクトボックス特有のスタイル */
+.form-group select {
+  padding-right: 2rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+}
+
+/* DatePickerのスタイル調整 */
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  display: block;
+  width: 100%;
+}
+
+/* DatePickerのテーマカスタマイズ */
+.react-datepicker {
+  font-family: 'Karla', sans-serif;
+  border-color: var(--primary-yellow);
+}
+
+.react-datepicker__header {
+  background-color: var(--primary-green);
+  border-bottom: none;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: white;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: var(--primary-yellow) !important;
+  color: var(--highlight-black) !important;
+}
+
+/* 送信ボタンのスタイル */
+.submit-button {
+  background-color: var(--primary-yellow);
+  color: var(--highlight-black);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #e5c113;
+}
+
+.submit-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* エラーメッセージのスタイル */
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #dc3545;
+}
+
+.required {
+  color: #dc3545;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .booking-container {
+    padding: 1rem;
+  }
+
+  .booking-form {
+    padding: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  /* タッチデバイス用の調整 */
+  input, select, textarea {
+    font-size: 16px; /* iOSでの自動ズームを防ぐ */
+    min-height: 44px; /* タッチターゲットサイズの確保 */
+  }
+}

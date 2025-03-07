@@ -7,6 +7,10 @@ import lemonDessertImage from 'images/lemon-dessert.jpg';
 
 function Specials() {
   const navigate = useNavigate();
+  const handleMenuClick = () => {
+    navigate('/menu');
+  };
+
   const specialItems = [
     {
       name: "Greek salad",
@@ -28,15 +32,11 @@ function Specials() {
     }
   ];
 
-  const handleMenuClick = () => {
-    navigate('/menu');
-  };
-
   return (
     <section className="specials">
       <div className="specials-top">
-      <h2>This week specials!</h2>
-      <button className="online-menu-btn" onClick={handleMenuClick}>Online Menu</button>
+        <h2>This week specials!</h2>
+        <button className="online-menu-btn" onClick={handleMenuClick}>Online Menu</button>
       </div>
 
       <div className="specials-grid">
@@ -44,10 +44,10 @@ function Specials() {
           <div key={index} className="special-item">
             <img src={item.image} alt={item.name} className="special-item-image" />
             <div className="special-item-content">
-            <h3>{item.name}</h3>
-            <p className="price">{item.price}</p>
-            <p className="description">{item.description}</p>
-            {/* <button>Order a delivery</button> */}
+              <h3>{item.name}</h3>
+              <p className="price">{item.price}</p>
+              <p className="description">{item.description}</p>
+              {/* <button>Order a delivery</button> */}
             </div>
           </div>
         ))}
